@@ -9,27 +9,31 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
 </head>
 <body>
-    <div class="wrap">
-        <h1>Slider con vue</h1>
-        <div id="conteinerVue">
-            <div class="containerImg">
-                
-                <img :src="srcImg" :alt="altImg">
+    <div id="conteinerVue">
+    <h1>Slider con vue</h1>
 
-                <p>{{TitleImg}}</p>
+        <div class="containerImg">
                 
-                <span class="left" @click='prev'>
-                    <i class="fas fa-arrow-left"></i>
-                </span>
-                
-                <span class=right @click='next'>
-                    <i class="fas fa-arrow-right"></i>
-                </span>
+            <img :src="srcImg" :alt="altImg">
 
+            <p>{{TitleImg}}</p>
+                
+            <span class="left" @click='prev'>
+                <i class="fas fa-arrow-left"></i>
+            </span>
+                
+            <span class=right @click='next'>
+                <i class="fas fa-arrow-right"></i>
+            </span>
+
+            <div class="points">
+                <div class="point" v-for='square in imgs'></div>
             </div>
-        </div>
-    </div>
 
+        </div>
+
+        <p>{{descrImg}}</p>
+    </div>
 
     <script src="module.js"></script>
     

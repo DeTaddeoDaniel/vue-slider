@@ -2,39 +2,40 @@ const slider = new Vue ({
     el: '#conteinerVue',
     data:{
 
-        test:'texting',
+        srcImg:'img/slider-img-0.jpg',
+        altImg:'Forest under the start',
 
         imgs: [
             {
-                scr: 'img/slider-img-0',
+                scr: 'img/slider-img-0.jpg',
                 text: 'Forest under the start',
             },
             {
-                scr: 'img/slider-img-1',
+                scr: 'img/slider-img-1.jpg',
                 text: 'Lake in the montain',
             },
             {
-                scr: 'img/slider-img-2',
-                text: 'Montain from aky',
+                scr: 'img/slider-img-2.jpg',
+                text: 'Montain from sky',
             },
             {
-                scr: 'img/slider-img-3',
+                scr: 'img/slider-img-3.jpg',
                 text: 'Forest in one day',
             },
             {
-                scr: 'img/slider-img-4',
+                scr: 'img/slider-img-4.jpg',
                 text: 'Lakes of ice',
             },
             {
-                scr: 'img/slider-img-5',
+                scr: 'img/slider-img-5.jpg',
                 text: 'Landscape montain with river',
             },
             {
-                scr: 'img/slider-img-6',
+                scr: 'img/slider-img-6.jpg',
                 text: 'river in the montain',
             },
             {
-                scr: 'img/slider-img-7',
+                scr: 'img/slider-img-7.jpg',
                 text: 'small lake in the montain',
             },
         ],
@@ -49,8 +50,12 @@ const slider = new Vue ({
             if(this.counter < 0){
                 this.counter = this.imgs.length-1;
             }
+
+            let dataInfo = this.imgs[this.counter];
+            this.srcImg = dataInfo.scr;
+            this.altImg = dataInfo.text;
             
-            console.log(this.counter);
+            console.log(dataInfo.text);
         },
 
         next: function (){
@@ -59,6 +64,10 @@ const slider = new Vue ({
             if(this.counter > this.imgs.length -1){
                 this.counter = 0;
             }
+
+            let dataInfo = this.imgs[this.counter];
+            this.srcImg = dataInfo.scr;
+            this.altImg = dataInfo.text;
 
             console.log(this.counter);
         }

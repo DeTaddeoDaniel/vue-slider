@@ -40,5 +40,13 @@ const slider = new Vue ({
         ],
         
         counter: 0
-    }
+    },
+    methods: {
+        prev(){
+            console.log('prev');
+        },
+        next(){
+            console.log('next');
+        }
+    },
 })

@@ -27,7 +27,13 @@
             </span>
 
             <div class="points">
-                <div class="point" v-for='square in imgs'></div>
+                <div 
+                        class="point " 
+                        v-for='(square, index) in imgs' 
+                        @click='clickChangeImageCircle(index)'
+                    >
+                </div>
+
             </div>
 
         </div>

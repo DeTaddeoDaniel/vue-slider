@@ -61,13 +61,7 @@ const slider = new Vue ({
                 this.counter = this.imgs.length-1;
             }
 
-            let dataInfo = this.imgs[this.counter];
-            this.srcImg = dataInfo.scr;
-            this.altImg = dataInfo.text;
-            this.TitleImg = dataInfo.text;
-            this.descrImg = dataInfo.descr;
-            
-            console.log(dataInfo.text);
+           this.changeImage();
         },
 
         next: function (){
@@ -77,13 +71,23 @@ const slider = new Vue ({
                 this.counter = 0;
             }
 
+            this.changeImage();
+        },
+
+        clickChangeImageCircle: function(index){
+            this.counter = index;
+            this.changeImage();
+        },
+
+        changeImage: function () {
+
             let dataInfo = this.imgs[this.counter];
+            
             this.srcImg = dataInfo.scr;
             this.altImg = dataInfo.text;
             this.TitleImg = dataInfo.text;
             this.descrImg = dataInfo.descr;
 
-            console.log(this.counter);
         }
     },
 })

@@ -1,0 +1,39 @@
+body{
+    background-color: peru;
+    font-family: sans-serif;
+}
+
+.conteinerVue{
+    background-color: purple;
+}
+
+img{
+    width: 100%;
+}
+
+.containerImg{
+    position:relative;
+    width: 100%;
+}
+
+span{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    color: white;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.left{
+    left: 35px;
+}
+
+.right{
+    left: calc(100% - 35px);
+}

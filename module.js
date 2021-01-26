@@ -54,6 +54,7 @@ const slider = new Vue ({
         timer: 3000,
 
         autoplay:'autoplay setting',
+        booleanAutoplay: true
     },
 
     created(){
@@ -65,7 +66,7 @@ const slider = new Vue ({
         this.descrImg='lorem lipsu 0';
 
         // start autoplay
-        this.autoplay = setInterval(this.next, this.timer)
+        this.startAutoplay();
     },
 
     methods: {
@@ -91,9 +92,9 @@ const slider = new Vue ({
         },
 
         clickChangeImageCircle: function(index){
-            clearInterval(this.autoplay)
             this.counter = index;
             this.changeImage();
+            this.stopAutoplay();
         },
 
         changeImage: function () {
@@ -105,6 +106,18 @@ const slider = new Vue ({
             this.TitleImg = dataInfo.text;
             this.descrImg = dataInfo.descr;
 
+        },
+
+        startAutoplay: function() {
+            this.autoplay = setInterval(this.next, this.timer);
+            this.booleanAutoplay = true;
+            console.log(this.booleanAutoplay)
+        },
+
+        stopAutoplay: function() {
+            clearInterval(this.autoplay);
+            this.booleanAutoplay = false;
+            console.log(this.booleanAutoplay)
         }
     },
 })

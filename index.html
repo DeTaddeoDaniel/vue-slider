@@ -36,6 +36,22 @@
 
             </div>
 
+            <div class="autoPlayButtons">
+                <p 
+                        class=" autoPlayButton"
+                        v-if='booleanAutoplay'
+                        @click='stopAutoplay'>
+                    <i class="fas fa-pause"></i>
+                </p>
+                <p 
+                        class=" autoPlayButton" 
+                        v-else 
+                        @click='startAutoplay'
+                    >
+                    <i class="fas fa-play"></i>
+                </p>
+            </div>
+
         </div>
 
         <p>{{descrImg}}</p>

@@ -16,7 +16,7 @@ img{
 
 .containerImg{
     position:relative;
-    width: 60%;
+    width: 100%;
     max-width: 700px;
 }
 
@@ -78,4 +78,26 @@ img{
 .points .point.active{
     background-color: blue;
 
+}
+
+.autoPlayButtons{
+    position: absolute;
+    top: 0;
+    right: 28px;
+    z-index: 1;
+    background-color: purple;
+    transform: translate(-100% , -50%);
+}
+
+.autoPlayButtons .autoPlayButton{
+    width: 28px;
+    height: 28px;
+    background-color: rgb(0, 0, 0);
+    z-index: 2;
+    font-size: 15px;
+    display: block;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

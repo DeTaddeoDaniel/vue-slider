@@ -4,6 +4,7 @@ const slider = new Vue ({
 
         srcImg:'img/slider-img-0.jpg',
         altImg:'Forest under the start',
+        TitleImg:'Forest under the start',
 
         imgs: [
             {
@@ -54,6 +55,7 @@ const slider = new Vue ({
             let dataInfo = this.imgs[this.counter];
             this.srcImg = dataInfo.scr;
             this.altImg = dataInfo.text;
+            this.TitleImg = dataInfo.text;
             
             console.log(dataInfo.text);
         },
@@ -68,6 +70,7 @@ const slider = new Vue ({
             let dataInfo = this.imgs[this.counter];
             this.srcImg = dataInfo.scr;
             this.altImg = dataInfo.text;
+            this.TitleImg = dataInfo.text;
 
             console.log(this.counter);
         }

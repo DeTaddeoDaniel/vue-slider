@@ -17,26 +17,38 @@ img{
     max-width: 500px;
 }
 
-span{
+.containerImg span{
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 35px;
+    height: 35px;
     color: white;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-size: 30px;
+    font-size: 20px;
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.left{
-    left: 35px;
+.containerImg .left{
+    left: 17.5px;
     border-radius: 0 50% 50% 0;
 }
 
-.right{
-    left: calc(100% - 35px);
+.containerImg .right{
+    left: calc(100% - 17.5px);
     border-radius: 50% 0 0 50%;
+}
+
+.containerImg p{
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }

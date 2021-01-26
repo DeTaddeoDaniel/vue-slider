@@ -2,10 +2,10 @@ const slider = new Vue ({
     el: '#conteinerVue',
     data:{
 
-        srcImg:'img/slider-img-0.jpg',
-        altImg:'Forest under the start',
-        TitleImg:'Forest under the start',
-        descrImg:'lorem lipsu 1',
+        srcImg:'src img',
+        altImg:'alt img',
+        TitleImg:'title img',
+        descrImg:'descrition img',
 
         imgs: [
             {
@@ -50,8 +50,24 @@ const slider = new Vue ({
             },
         ],
         
-        counter: 0
+        counter: 0,
+        timer: 3000,
+
+        autoplay:'autoplay setting',
     },
+
+    created(){
+
+        // setting init data variables
+        this.srcImg='img/slider-img-0.jpg';
+        this.altImg='Forest under the start';
+        this.TitleImg='Forest under the start';
+        this.descrImg='lorem lipsu 0';
+
+        // start autoplay
+        this.autoplay = setInterval(this.next, this.timer)
+    },
+
     methods: {
         
         prev:function (){
@@ -75,6 +91,7 @@ const slider = new Vue ({
         },
 
         clickChangeImageCircle: function(index){
+            clearInterval(this.autoplay)
             this.counter = index;
             this.changeImage();
         },

@@ -42,11 +42,25 @@ const slider = new Vue ({
         counter: 0
     },
     methods: {
-        prev(){
-            console.log('prev');
+        
+        prev:function (){
+            this.counter--;
+            
+            if(this.counter < 0){
+                this.counter = this.imgs.length-1;
+            }
+            
+            console.log(this.counter);
         },
-        next(){
-            console.log('next');
+
+        next: function (){
+            this.counter++;
+            
+            if(this.counter > this.imgs.length -1){
+                this.counter = 0;
+            }
+
+            console.log(this.counter);
         }
     },
 })

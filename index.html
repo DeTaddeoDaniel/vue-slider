@@ -28,7 +28,7 @@
 
             <div class="points">
                 <div 
-                        class="point " 
+                        :class="(index == counter ) ? 'point active' : 'point' "  
                         v-for='(square, index) in imgs' 
                         @click='clickChangeImageCircle(index)'
                     >
